@@ -1,0 +1,29 @@
+// Links that change at launch live here, so the pages never need editing for them.
+const MESHFORGE = {
+  // Lemon Squeezy checkout link for "MeshForge 1.x" (same as buyUrl in src/shared/license.ts).
+  // While empty, Buy buttons say "Coming soon".
+  buyUrl: '',
+  downloadUrl: 'https://github.com/borisenev01-dev/meshforge-releases/releases/latest'
+}
+
+for (const a of document.querySelectorAll('[data-download]')) a.href = MESHFORGE.downloadUrl
+
+const buy = document.querySelectorAll('[data-buy]')
+if (MESHFORGE.buyUrl) {
+  for (const a of buy) {
+    a.href = MESHFORGE.buyUrl
+    a.classList.add('lemonsqueezy-button') // opens the checkout as an overlay
+  }
+  const s = document.createElement('script')
+  s.src = 'https://app.lemonsqueezy.com/js/lemon.js'
+  s.defer = true
+  document.head.append(s)
+} else {
+  for (const a of buy) {
+    a.removeAttribute('href')
+    a.setAttribute('aria-disabled', 'true')
+    a.textContent = 'Coming soon'
+  }
+}
+
+for (const el of document.querySelectorAll('[data-year]')) el.textContent = String(new Date().getFullYear())

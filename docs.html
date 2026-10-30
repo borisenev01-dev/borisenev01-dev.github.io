@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MeshForge Docs</title>
+  <meta name="description" content="How to install MeshForge, connect an AI, build and edit parts, and manage your license.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- header -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/logo.svg" alt=""><span>Mesh<b>Forge</b></span></a>
+    <nav class="nav">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="docs.html">Docs</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="btn small primary" data-download href="#">Download</a>
+    </nav>
+  </div>
+</header>
+<!-- /header -->
+
+<main class="page">
+  <h1>Getting started</h1>
+  <p class="updated">For MeshForge 1.x on Windows 10 and 11 (64-bit).</p>
+
+  <nav class="toc">
+    <ol>
+      <li><a href="#install">Install</a></li>
+      <li><a href="#connect">Connect an AI</a></li>
+      <li><a href="#first-part">Your first part</a></li>
+      <li><a href="#editing">Editing by hand</a></li>
+      <li><a href="#manual">Manual mode (sketching)</a></li>
+      <li><a href="#files">Saving, importing and exporting</a></li>
+      <li><a href="#showroom">The Showroom</a></li>
+      <li><a href="#license">Trial and license</a></li>
+      <li><a href="#help">Troubleshooting</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="install">1. Install</h2>
+  <ol>
+    <li><a data-download href="#">Download the installer</a> (<code>MeshForge-Setup-<i>version</i>.exe</code>) and run it.</li>
+    <li>If Windows shows “Windows protected your PC”, click <b>More info</b>, then <b>Run anyway</b>. MeshForge isn't code-signed yet, so SmartScreen warns about it.</li>
+    <li>Accept the license agreement and pick a folder. MeshForge adds a desktop and Start menu shortcut.</li>
+  </ol>
+  <p>Updates within 1.x download in the background and install the next time you restart MeshForge.</p>
+
+  <h2 id="connect">2. Connect an AI</h2>
+  <p>On first launch MeshForge opens <b>Connect an AI</b>. You can reopen it any time from the AI name in the chat panel, or from the AI menu. There are two ways to connect.</p>
+
+  <h3>Chat here in MeshForge</h3>
+  <p>You type in MeshForge's own chat panel. Choose a service, follow the three steps, and MeshForge tests the connection before saving it.</p>
+  <table>
+    <tr><th>Service</th><th>Cost</th><th>What you need</th></tr>
+    <tr><td>Claude (Anthropic)</td><td>Pay as you go</td><td>An API key from console.anthropic.com</td></tr>
+    <tr><td>ChatGPT (OpenAI)</td><td>Pay as you go</td><td>An API key from platform.openai.com</td></tr>
+    <tr><td>Gemini (Google)</td><td>Free tier</td><td>A key from aistudio.google.com</td></tr>
+    <tr><td>OpenRouter</td><td>Some models free</td><td>A key from openrouter.ai</td></tr>
+    <tr><td>On this computer</td><td>Free</td><td>Ollama or LM Studio running a model that supports “tools”</td></tr>
+    <tr><td>Other service</td><td>Varies</td><td>Any OpenAI-compatible address and key</td></tr>
+  </table>
+  <p>Keys are encrypted with Windows' own protection and stored only on your computer. A key is only ever sent to the company it belongs to.</p>
+
+  <h3>Use an AI app I already have</h3>
+  <p>If you use <b>Claude Code</b>, <b>Claude Desktop</b>, <b>Codex</b>, <b>Gemini CLI</b>, <b>Cursor</b> or <b>VS Code</b>, MeshForge can set it up with one click. That app can then build parts in MeshForge using your existing plan. Claude Desktop and Gemini CLI work on their free plans.</p>
+  <div class="callout">MeshForge must be open while the other app uses it. Its edits appear live, show up in the chat panel, and each burst of edits is one undo step.</div>
+
+  <h2 id="first-part">3. Your first part</h2>
+  <p>On the home screen, click <b>Create</b>. Then describe what you need in the chat panel, with dimensions in millimetres:</p>
+  <p class="callout">“Make a 60 × 40 × 5 mm mounting plate with four M4 holes, 5 mm from each corner.”</p>
+  <ul>
+    <li>The AI builds the part with MeshForge's tools. Precise parts are made as <b>parametric scripts</b>, so their dimensions appear under <b>Parameters</b> when you select them. Change a number and the part rebuilds.</li>
+    <li>Tick <b>Include view</b> to send the AI a picture of the viewport along with your message.</li>
+    <li>Everything one message changed is one undo step. <b>Undo [AI]'s changes</b> takes the whole turn back.</li>
+    <li>The conversation is saved with the project. <b>New chat</b> starts a fresh one.</li>
+  </ul>
+
+  <h2 id="editing">4. Editing by hand</h2>
+  <table>
+    <tr><th>Key</th><th>Action</th></tr>
+    <tr><td><kbd>W</kbd> <kbd>E</kbd> <kbd>R</kbd></td><td>Move, rotate, scale the selected part</td></tr>
+    <tr><td><kbd>F</kbd></td><td>Frame the selection (or everything)</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd></td><td>Undo / redo</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>D</kbd></td><td>Duplicate</td></tr>
+    <tr><td><kbd>Delete</kbd></td><td>Delete the selection</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>Clear the selection</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>G</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd></td><td>Group the selection / ungroup</td></tr>
+    <tr><td><kbd>M</kbd></td><td>Measure</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>H</kbd></td><td>Home screen</td></tr>
+  </table>
+  <h3>Groups</h3>
+  <p>Select parts and press <kbd>Ctrl</kbd>+<kbd>G</kbd>, or click <b>Group</b> above the scene tree. Drag rows onto a group to put them inside, or above another row to reorder. Selecting a group lets you move or turn all its parts with one handle, and colour, hide, explode or duplicate them together. The AI can make groups too.</p>
+  <h3>Measuring</h3>
+  <p>Click <b>Measure</b> in the toolbar or press <kbd>M</kbd>. <b>Distance</b> measures between two points (corners and edge middles snap) and shows the X, Y and Z components. <b>Angle</b> gives the angle between two faces, and <b>Diameter</b> measures a hole, pin or boss when you click its wall. <kbd>Esc</kbd> clears the readouts, and pressing it again stops measuring.</p>
+  <p>The toolbar has primitives (<b>Add</b>), booleans (select the part to keep first, then the others), Mirror, Smooth, Subdivide and Repair. The Properties panel edits name, colour, position, rotation, scale and parameters. <b>Edit script…</b> opens a part's script, and <b>Bake</b> turns it into a plain mesh.</p>
+  <p>When a boolean involves a sketched or parametric part, the result (marked ⊕ in the scene tree) keeps its inputs. Properties lists them under <b>Built from</b>: change an input's parameters or click <b>Edit sketch</b>, and the combined part is rebuilt. <b>Bake</b> flattens it when you no longer need that.</p>
+
+  <h2 id="manual">5. Manual mode (sketching)</h2>
+  <ol>
+    <li>Switch the sidebar from <b>AI</b> to <b>Manual</b> and pick a plane (Top, Front, Right, with an offset) or a face of a part.</li>
+    <li>Draw with Line, Rectangle, Centre rectangle, Circle, 3-point arc and Polygon. Points snap to each other. Type a length or angle while drawing to set it exactly. Trim and Fillet clean up corners, including where lines meet arcs.</li>
+    <li>Select one or two items to add <b>constraints</b>: parallel, perpendicular, equal, tangent, concentric, on curve and fix, plus <b>dimensions</b> for length, distance, radius or diameter and angle. Double-click a dimension in the view to change it, and the sketch follows. The panel shows how many ways the sketch can still move, or <b>Fully defined</b>.</li>
+    <li><b>Extrude</b> (one or both sides) or <b>Revolve</b>. Closed loops inside others become holes, and you can click regions to include or leave out.</li>
+    <li>Make a new part, or <b>Join</b>, <b>Cut</b> or <b>Intersect</b> with an existing one. A sketched part keeps <b>Edit sketch</b> so you can change it later, even after it was joined to or cut from another part. <b>Separate</b> in Properties takes a joined or cut part back apart.</li>
+  </ol>
+
+  <h2 id="files">6. Saving, importing and exporting</h2>
+  <ul>
+    <li><b>Autosave:</b> projects save themselves a moment after each change, named after their first part, in <code>Documents\Mesh-Forge\Renders</code>. <b>My Renders</b> on the home screen lists them with previews.</li>
+    <li><b>Import</b> (<kbd>Ctrl</kbd>+<kbd>I</kbd>): STL, OBJ, GLB, glTF, PLY and 3MF. Meshes are welded and repaired so booleans work.</li>
+    <li><b>Export</b> (<kbd>Ctrl</kbd>+<kbd>E</kbd>): STEP, STL, 3MF, OBJ, GLB or PLY, of the selection or the whole scene. Pick the format by its file type in the save dialog.</li>
+    <li><b>STEP</b> is for CAD programs. Sketched parts (and joins or cuts made from them) become exact solids with true arcs and holes. Parts without a sketch, such as imported meshes, are written as faceted solids, and the status bar names them. The first STEP export takes a moment while the CAD engine (OpenCascade) loads.</li>
+    <li>Project files (<code>.mforge</code>) open in MeshForge when you double-click them. Projects opened from elsewhere are copied into Renders.</li>
+  </ul>
+
+  <h2 id="showroom">7. The Showroom</h2>
+  <p>Click <b>Add to Showroom</b> in the toolbar, or ★ on a My Renders card, to put a frozen copy of a finished assembly on display. In the Showroom viewer:</p>
+  <ul>
+    <li><b>Explode</b> pulls the parts apart, either Outward, Stacked, or As designed. Set each part's “As designed” offset in its Properties under <b>Explode</b>. <b>Seed from Outward</b> gives you a starting point.</li>
+    <li><b>Section</b> cuts along X, Y or Z. <b>See-through</b> makes housings transparent. Standard views and a turntable are at the bottom.</li>
+    <li>The <b>Parts</b> list groups identical pieces. Click a part for its details, or use the eye to hide it.</li>
+    <li>Keys: <kbd>E</kbd> explode, <kbd>S</kbd> section, <kbd>H</kbd> hide, <kbd>R</kbd> reset, <kbd>Esc</kbd> close.</li>
+  </ul>
+
+  <h2 id="license">8. Trial and license</h2>
+  <ul>
+    <li>Everything works for <b>14 days</b>. After that MeshForge is read-only: you can open, view and export, but not edit.</li>
+    <li>After buying, you get a license key by email. Enter it in <b>Settings → License</b>. It works on up to 3 computers.</li>
+    <li>MeshForge re-checks the key about once a week and keeps working offline for up to 30 days.</li>
+    <li>To move to a new computer, click <b>Deactivate</b> on the old one first.</li>
+  </ul>
+
+  <h2 id="help">9. Troubleshooting</h2>
+  <h3>The AI app says MeshForge isn't available</h3>
+  <p>Open MeshForge, then try again. If you moved or reinstalled MeshForge, open Connect an AI → Use an AI app I already have, and click <b>Fix</b> next to the app.</p>
+  <h3>“The API key was rejected”</h3>
+  <p>Create a new key on the AI company's website and use <b>Use a different key</b>. For Claude and ChatGPT, check that the account has credit.</p>
+  <h3>A local model doesn't build anything</h3>
+  <p>Pick a model marked as supporting tools (function calling). Small models often struggle, so a larger one works better if your computer can run it.</p>
+  <h3>Something else</h3>
+  <p>Email <a href="mailto:borisenev01@gmail.com">borisenev01@gmail.com</a> with what you did and what happened. A screenshot helps.</p>
+</main>
+
+<!-- footer -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© <span data-year>2026</span> Boris Enev · <a href="mailto:borisenev01@gmail.com">borisenev01@gmail.com</a></div>
+    <nav>
+      <a href="docs.html">Docs</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refund.html">Refunds</a>
+    </nav>
+    <p class="fine">Claude, ChatGPT, Gemini and the other names mentioned are trademarks of their owners. MeshForge is an independent product, not affiliated with or endorsed by Anthropic, OpenAI, Google or the other AI companies listed.</p>
+  </div>
+</footer>
+<!-- /footer -->
+<script src="site.js"></script>
+</body>
+</html>

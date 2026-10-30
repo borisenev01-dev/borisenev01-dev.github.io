@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MeshForge: 3D modeling with AI</title>
+  <meta name="description" content="MeshForge is a Windows 3D modeling app where AI builds and edits your parts. Use Claude, ChatGPT, Gemini, a free local model, or the AI app you already have. One-time purchase.">
+  <meta property="og:title" content="MeshForge: 3D modeling with AI">
+  <meta property="og:description" content="Describe a part, watch it appear, tweak it with sliders, export it for printing or CAD.">
+  <meta property="og:image" content="img/editor.png">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- header -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/logo.svg" alt=""><span>Mesh<b>Forge</b></span></a>
+    <nav class="nav">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="docs.html">Docs</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="btn small primary" data-download href="#">Download</a>
+    </nav>
+  </div>
+</header>
+<!-- /header -->
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">For Windows · 14-day free trial</span>
+      <h1>Describe a part.<br>Watch it appear.</h1>
+      <p class="lede">
+        MeshForge is a 3D modeling app where an AI builds and edits your parts while you watch.
+        Every dimension stays editable, and the result exports straight to your printer or CAD tool.
+      </p>
+      <div class="ctas">
+        <a class="btn primary" data-download href="#">Download free trial</a>
+        <a class="btn" href="#pricing">Buy for $29</a>
+      </div>
+      <p class="note muted small">Works with Claude, ChatGPT, Gemini, free local models, and AI apps you already use.</p>
+      <img class="shot" src="img/editor.png" width="1800" height="1125"
+        alt="MeshForge editor: the chat panel shows Claude building a pillow block, base plate, shaft and bolts, which appear in the 3D viewport.">
+    </div>
+  </section>
+
+  <section class="alt" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>From words to a printable part</h2>
+        <p>No modeling experience needed to start, and no limits once you know what you're doing.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>Connect an AI</h3>
+          <p>Paste a key from Claude, ChatGPT or Gemini, run a free model on your own computer, or let MeshForge set up Claude Code, Claude Desktop, Codex, Cursor or VS Code for you.</p>
+        </div>
+        <div class="step">
+          <h3>Describe what you need</h3>
+          <p>“A pillow block for a 12 mm shaft on a 90 × 50 mm plate.” The AI builds it with MeshForge's modeling tools, and each request is one undo step.</p>
+        </div>
+        <div class="step">
+          <h3>Tweak and export</h3>
+          <p>Edit any dimension by number, sketch by hand, or just ask for changes. Export STEP for CAD, or STL, 3MF, OBJ, GLB and PLY.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="split">
+        <div class="split-text">
+          <h2>Parts you can still change</h2>
+          <p>The AI writes precise parts as small parametric scripts with named dimensions. Type a new shaft diameter or plate size and the part rebuilds instantly. No re-prompting, no starting over.</p>
+          <ul class="ticks">
+            <li>Booleans, mirrors, arrays, extrusions, rounded profiles and hole patterns</li>
+            <li>Smooth, subdivide, decimate, remesh and repair for organic shapes and scans</li>
+            <li>Watertight output that's ready for slicing</li>
+          </ul>
+        </div>
+        <img src="img/params.png" width="1800" height="1125" loading="lazy" alt="The pillow block selected, with its shaft diameter, height and foot dimensions editable in the Properties panel.">
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="split flip">
+        <div class="split-text">
+          <h2>Use the AI you already have</h2>
+          <p>Pick the AI you like and switch whenever you want. Your conversation is saved with each project, so you can pick up where you left off, even with a different AI.</p>
+          <div class="ai-list" style="justify-content:flex-start">
+            <span class="chip">Claude</span>
+            <span class="chip">ChatGPT</span>
+            <span class="chip">Gemini <b>free tier</b></span>
+            <span class="chip">OpenRouter <b>free models</b></span>
+            <span class="chip">Ollama · LM Studio <b>free</b></span>
+            <span class="chip">Claude Code</span>
+            <span class="chip">Claude Desktop</span>
+            <span class="chip">Codex</span>
+            <span class="chip">Cursor</span>
+            <span class="chip">VS Code</span>
+          </div>
+        </div>
+        <img src="img/connect.png" width="1800" height="1125" loading="lazy" alt="The Connect an AI window with Claude, ChatGPT, Gemini, OpenRouter, local models and other services.">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="split">
+        <div class="split-text">
+          <h2>Show off the assembly</h2>
+          <p>Put finished work in the Showroom: a full-screen viewer with exploded views, section planes, a parts list and a turntable. Set how far each part flies out, so the explode looks the way you designed it.</p>
+          <ul class="ticks">
+            <li>Explode outward, in stacked layers, or as designed</li>
+            <li>Section along X, Y or Z, with see-through housings</li>
+            <li>Parts list with materials, specs and notes</li>
+          </ul>
+        </div>
+        <img src="img/showroom.png" width="1800" height="1125" loading="lazy" alt="Showroom viewer showing the pillow block assembly exploded into its parts.">
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Everything else you'd expect</h2>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="icon">✏️</div><h3>Manual mode</h3><p>Sketch lines, arcs, circles and polygons on any plane or face, with typed dimensions and snapping. Extrude or revolve, then join, cut or intersect.</p></div>
+        <div class="card"><div class="icon">📏</div><h3>Measure and organise</h3><p>Measure distances, angles and hole diameters right on the model. Group parts in the scene tree and move them as one.</p></div>
+        <div class="card"><div class="icon">↶</div><h3>Safe to experiment</h3><p>Each AI turn is a single undo step, and “Undo Claude's changes” takes the whole turn back. Projects save themselves after every change.</p></div>
+        <div class="card"><div class="icon">📦</div><h3>Import anything</h3><p>Open STL, OBJ, GLB, glTF, PLY and 3MF. Broken meshes are repaired automatically.</p></div>
+        <div class="card"><div class="icon">🔒</div><h3>Private</h3><p>No telemetry. Keys are encrypted on your computer, and your prompts go only to the AI you picked.</p></div>
+        <div class="card"><div class="icon">🔄</div><h3>Updates included</h3><p>Every 1.x update installs in the background. You buy once and keep the version you paid for.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>One price. No subscription.</h2>
+        <p>Try everything free for 14 days. After that, your projects still open, view and export, and a license unlocks editing.</p>
+      </div>
+      <div class="price-card">
+        <span class="eyebrow">Launch price</span>
+        <h3>MeshForge 1.x</h3>
+        <div class="price">$29<s>$49</s></div>
+        <p class="muted small">One-time payment. Local VAT may be added at checkout.</p>
+        <ul class="ticks">
+          <li>All 1.x updates</li>
+          <li>Use on up to 3 of your computers</li>
+          <li>Personal and commercial work</li>
+          <li>14-day money-back guarantee</li>
+        </ul>
+        <a class="btn primary" data-buy href="#">Buy MeshForge</a>
+        <p class="muted small" style="margin-top:14px">
+          AI usage is billed by the AI company you connect, or free with Gemini's free tier or a local model.
+          Payment is handled by Lemon Squeezy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="faq">
+    <div class="wrap">
+      <div class="section-head"><h2>Questions</h2></div>
+      <div class="faq">
+        <details>
+          <summary>Do I need to pay for an AI as well?</summary>
+          <p>Not necessarily. Gemini has a free tier, OpenRouter has free models, and Ollama or LM Studio run models on your own computer for free. If you already pay for Claude or ChatGPT, MeshForge can use that through Claude Code, Claude Desktop or Codex. With an API key you pay the AI company directly for what you use.</p>
+        </details>
+        <details>
+          <summary>What happens when the trial ends?</summary>
+          <p>MeshForge becomes read-only. You can still open, view and export every project, so your work is never locked away. Enter a license key in Settings to edit again.</p>
+        </details>
+        <details>
+          <summary>Are updates included?</summary>
+          <p>Yes, every 1.x update, installed automatically in the background. A future 2.0 would be an optional paid upgrade, and your 1.x license keeps working forever.</p>
+        </details>
+        <details>
+          <summary>Is my work sent anywhere?</summary>
+          <p>MeshForge has no telemetry and never sends your projects to us. When you chat, your message and a short description of the scene go to the AI you picked. The app also contacts Lemon Squeezy to check your license and GitHub to check for updates. Details are in the <a href="privacy.html">privacy policy</a>.</p>
+        </details>
+        <details>
+          <summary>Windows says “Windows protected your PC”. Is it safe?</summary>
+          <p>That's Windows SmartScreen. It warns about newer apps that aren't code-signed yet, and signing is on the way. Click <b>More info</b>, then <b>Run anyway</b>.</p>
+        </details>
+        <details>
+          <summary>Can I move my license to a new computer?</summary>
+          <p>Yes. Click Deactivate in Settings on the old computer, then enter the key on the new one. A license works on up to 3 computers at once.</p>
+        </details>
+        <details>
+          <summary>Does it export STEP?</summary>
+          <p>Yes. Parts you sketch and extrude or revolve in Manual mode, and joins and cuts made from them, export as exact solids with true flat, cylindrical and curved faces that SolidWorks, Fusion, FreeCAD and other CAD programs open as real geometry. Other parts (imported meshes, AI-made shapes) are written as faceted solids. STL, 3MF, OBJ, GLB and PLY are there too.</p>
+        </details>
+        <details>
+          <summary>Mac or Linux?</summary>
+          <p>Windows 10 and 11 (64-bit) only for now.</p>
+        </details>
+        <details>
+          <summary>What if it isn't for me?</summary>
+          <p>Email within 14 days of buying and you'll get a full refund. See the <a href="refund.html">refund policy</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- footer -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© <span data-year>2026</span> Boris Enev · <a href="mailto:borisenev01@gmail.com">borisenev01@gmail.com</a></div>
+    <nav>
+      <a href="docs.html">Docs</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refund.html">Refunds</a>
+    </nav>
+    <p class="fine">Claude, ChatGPT, Gemini and the other names mentioned are trademarks of their owners. MeshForge is an independent product, not affiliated with or endorsed by Anthropic, OpenAI, Google or the other AI companies listed.</p>
+  </div>
+</footer>
+<!-- /footer -->
+<script src="site.js"></script>
+</body>
+</html>
