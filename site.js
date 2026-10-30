@@ -11,13 +11,8 @@ for (const a of document.querySelectorAll('[data-download]')) a.href = MESHFORGE
 const buy = document.querySelectorAll('[data-buy]')
 if (MESHFORGE.buyUrl) {
   for (const a of buy) {
-    a.href = MESHFORGE.buyUrl
-    a.classList.add('lemonsqueezy-button') // opens the checkout as an overlay
+    a.href = MESHFORGE.buyUrl // a plain link: no third-party script runs until someone chooses to buy
   }
-  const s = document.createElement('script')
-  s.src = 'https://app.lemonsqueezy.com/js/lemon.js'
-  s.defer = true
-  document.head.append(s)
 } else {
   for (const a of buy) {
     a.removeAttribute('href')
