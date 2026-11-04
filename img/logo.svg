@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="512" height="512" shape-rendering="crispEdges">
   <!--
-    MeshForge, 8-bit: a pixel anvil (forge) with faceted shading bands (mesh) and a sparkle,
+    SwageWork, 8-bit: a pixel anvil (forge) with faceted shading bands (mesh) and a sparkle,
     on a dithered tile. Generated from a 32x32 pixel grid; scale by whole multiples of 32.
   -->
   <rect x="3" y="1" width="26" height="1" fill="#26354a"/>

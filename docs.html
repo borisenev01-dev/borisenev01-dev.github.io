@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MeshForge Docs</title>
-  <meta name="description" content="How to install MeshForge, connect an AI, build and edit parts, and manage your license.">
+  <title>SwageWork Docs</title>
+  <meta name="description" content="How to install SwageWork, connect an AI, build and edit parts, and manage your license.">
   <link rel="icon" href="img/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -26,7 +26,7 @@
 
 <main class="page">
   <h1>Getting started</h1>
-  <p class="updated">For MeshForge 1.x on Windows 10 and 11 (64-bit).</p>
+  <p class="updated">For SwageWork 1.x on Windows 10 and 11 (64-bit).</p>
 
   <nav class="toc">
     <ol>
@@ -44,17 +44,17 @@
 
   <h2 id="install">1. Install</h2>
   <ol>
-    <li><a data-download href="#">Download the installer</a> (<code>MeshForge-Setup-<i>version</i>.exe</code>) and run it.</li>
-    <li>If Windows shows “Windows protected your PC”, click <b>More info</b>, then <b>Run anyway</b>. MeshForge isn't code-signed yet, so SmartScreen warns about it.</li>
-    <li>Accept the license agreement and pick a folder. MeshForge adds a desktop and Start menu shortcut.</li>
+    <li><a data-download href="#">Download the installer</a> (<code>SwageWork-Setup-<i>version</i>.exe</code>) and run it.</li>
+    <li>If Windows shows “Windows protected your PC”, click <b>More info</b>, then <b>Run anyway</b>. SwageWork isn't code-signed yet, so SmartScreen warns about it.</li>
+    <li>Accept the license agreement and pick a folder. SwageWork adds a desktop and Start menu shortcut.</li>
   </ol>
-  <p>Updates within 1.x download in the background and install the next time you restart MeshForge.</p>
+  <p>Updates within 1.x download in the background and install the next time you restart SwageWork.</p>
 
   <h2 id="connect">2. Connect an AI</h2>
-  <p>On first launch MeshForge opens <b>Connect an AI</b>. You can reopen it any time from the AI name in the chat panel, or from the AI menu. There are two ways to connect.</p>
+  <p>On first launch SwageWork opens <b>Connect an AI</b>. You can reopen it any time from the AI name in the chat panel, or from the AI menu. There are two ways to connect.</p>
 
-  <h3>Chat here in MeshForge</h3>
-  <p>You type in MeshForge's own chat panel. Choose a service, follow the three steps, and MeshForge tests the connection before saving it.</p>
+  <h3>Chat here in SwageWork</h3>
+  <p>You type in SwageWork's own chat panel. Choose a service, follow the three steps, and SwageWork tests the connection before saving it.</p>
   <table>
     <tr><th>Service</th><th>Cost</th><th>What you need</th></tr>
     <tr><td>Claude (Anthropic)</td><td>Pay as you go</td><td>An API key from console.anthropic.com</td></tr>
@@ -67,14 +67,14 @@
   <p>Keys are encrypted with Windows' own protection and stored only on your computer. A key is only ever sent to the company it belongs to.</p>
 
   <h3>Use an AI app I already have</h3>
-  <p>If you use <b>Claude Code</b>, <b>Claude Desktop</b>, <b>Codex</b>, <b>Gemini CLI</b>, <b>Cursor</b> or <b>VS Code</b>, MeshForge can set it up with one click. That app can then build parts in MeshForge using your existing plan. Claude Desktop and Gemini CLI work on their free plans.</p>
-  <div class="callout">MeshForge must be open while the other app uses it. Its edits appear live, show up in the chat panel, and each burst of edits is one undo step.</div>
+  <p>If you use <b>Claude Code</b>, <b>Claude Desktop</b>, <b>Codex</b>, <b>Gemini CLI</b>, <b>Cursor</b> or <b>VS Code</b>, SwageWork can set it up with one click. That app can then build parts in SwageWork using your existing plan. Claude Desktop and Gemini CLI work on their free plans.</p>
+  <div class="callout">SwageWork must be open while the other app uses it. Its edits appear live, show up in the chat panel, and each burst of edits is one undo step.</div>
 
   <h2 id="first-part">3. Your first part</h2>
   <p>On the home screen, click <b>Create</b>. Then describe what you need in the chat panel, with dimensions in millimetres:</p>
   <p class="callout">“Make a 60 × 40 × 5 mm mounting plate with four M4 holes, 5 mm from each corner.”</p>
   <ul>
-    <li>The AI builds the part with MeshForge's tools. Precise parts are made as <b>parametric scripts</b>, so their dimensions appear under <b>Parameters</b> when you select them. Change a number and the part rebuilds.</li>
+    <li>The AI builds the part with SwageWork's tools. Precise parts are made as <b>parametric scripts</b>, so their dimensions appear under <b>Parameters</b> when you select them. Change a number and the part rebuilds.</li>
     <li>Tick <b>Include view</b> to send the AI a picture of the viewport along with your message. The AI can also ask for renders of your model while it works.</li>
     <li>Everything one message changed is one undo step. <b>Undo [AI]'s changes</b> takes the whole turn back.</li>
     <li>The conversation is saved with the project. <b>New chat</b> starts a fresh one.</li>
@@ -111,11 +111,11 @@
 
   <h2 id="files">6. Saving, importing and exporting</h2>
   <ul>
-    <li><b>Autosave:</b> projects save themselves a moment after each change, named after their first part, in <code>Documents\Mesh-Forge\Renders</code>. <b>My Renders</b> on the home screen lists them with previews.</li>
+    <li><b>Autosave:</b> projects save themselves a moment after each change (while an AI is working, when its turn finishes), named after their first part, in <code>Documents\SwageWork\Renders</code>. <b>My Renders</b> on the home screen lists them with previews.</li>
     <li><b>Import</b> (<kbd>Ctrl</kbd>+<kbd>I</kbd>): STL, OBJ, GLB, glTF, PLY and 3MF. Meshes are welded and repaired so booleans work.</li>
     <li><b>Export</b> (<kbd>Ctrl</kbd>+<kbd>E</kbd>): STEP, STL, 3MF, OBJ, GLB or PLY, of the selection or the whole scene. Pick the format by its file type in the save dialog.</li>
     <li><b>STEP</b> is for CAD programs. Sketched parts (and joins or cuts made from them) become exact solids with true arcs and holes. Parts without a sketch, such as imported meshes, are written as faceted solids, and the status bar names them. The first STEP export takes a moment while the CAD engine (OpenCascade) loads.</li>
-    <li>Project files (<code>.mforge</code>) open in MeshForge when you double-click them. Projects opened from elsewhere are copied into Renders.</li>
+    <li>Project files (<code>.swage</code>) open in SwageWork when you double-click them. Projects opened from elsewhere are copied into Renders.</li>
   </ul>
 
   <h2 id="showroom">7. The Showroom</h2>
@@ -129,15 +129,15 @@
 
   <h2 id="license">8. Trial and license</h2>
   <ul>
-    <li>Everything works for <b>14 days</b>. After that MeshForge is read-only: you can open, view and export, but not edit.</li>
+    <li>Everything works for <b>14 days</b>. After that SwageWork is read-only: you can open, view and export, but not edit.</li>
     <li>After buying, you get a license key by email. Enter it in <b>Settings → License</b>. It works on up to 3 computers.</li>
-    <li>MeshForge re-checks the key about once a week and keeps working offline for up to 30 days. After that it is read-only until it can reach the license server again.</li>
+    <li>SwageWork re-checks the key about once a week and keeps working offline for up to 30 days. After that it is read-only until it can reach the license server again.</li>
     <li>To move to a new computer, click <b>Deactivate</b> on the old one first.</li>
   </ul>
 
   <h2 id="help">9. Troubleshooting</h2>
-  <h3>The AI app says MeshForge isn't available</h3>
-  <p>Open MeshForge, then try again. If you moved or reinstalled MeshForge, open Connect an AI → Use an AI app I already have, and click <b>Fix</b> next to the app.</p>
+  <h3>The AI app says SwageWork isn't available</h3>
+  <p>Open SwageWork, then try again. If you moved or reinstalled SwageWork, open Connect an AI → Use an AI app I already have, and click <b>Fix</b> next to the app.</p>
   <h3>“The API key was rejected”</h3>
   <p>Create a new key on the AI company's website and use <b>Use a different key</b>. For Claude and ChatGPT, check that the account has credit.</p>
   <h3>A local model doesn't build anything</h3>
@@ -156,7 +156,7 @@
       <a href="privacy.html">Privacy</a>
       <a href="refund.html">Refunds</a>
     </nav>
-    <p class="fine">Claude, ChatGPT, Gemini and the other names mentioned are trademarks of their owners. MeshForge is an independent product, not affiliated with or endorsed by Anthropic, OpenAI, Google or the other AI companies listed.</p>
+    <p class="fine">Claude, ChatGPT, Gemini and the other names mentioned are trademarks of their owners. SwageWork is an independent product, not affiliated with or endorsed by Anthropic, OpenAI, Google or the other AI companies listed.</p>
   </div>
 </footer>
 <!-- /footer -->
